@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="myflickr.js"></script>
+        <title>MyFlickr</title>
+        <script>
+            new MyFlickr("63cbc73dc0e782d25f169a4e6abeee26");
+        </script>
+    </head>
+    <body>
+        <div class="page-container">
+            <nav class="shadow">
+                <div class="dropdown">
+                    <button class="dropbtn" id="gallerys-btn">
+                    <img src="images/galleryicon.png"> <span id="gallerys-btn-label"></span></button>
+                    <div id="gallerys-dropbtn" class="dropdown-content">
+                        <span id="gallerys-dropbtn-items">
+                        </span>
+                        <a>
+                        <input type="text" id="new-gallery-name-field" placeholder="Namn på nytt galleri">
+                        <input type="button" id="new-gallery-create-btn" value="Skapa">
+                        </a>
+                    </div>
+                </div>
+                <form class="search" onsubmit="event.preventDefault()">
+                    <div class="logo">
+                        <img src="images/myflickr.png" />
+                    </div>
+                    <input type="text" name="q" id="search-field" placeholder="Skriv in sökord och tryck enter" />
+                </form>
+            </nav>
+            <div id="search-result"></div>
+            <div id="search-loading">
+                <img src="images/loading.gif" />
+            </div>
+        </div>
+        <div id="imageviewer">
+            <img src="" id="imageviewer-image">
+        </div>
+    </body>
+</html>
